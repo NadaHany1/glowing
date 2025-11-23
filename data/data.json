@@ -1,0 +1,37 @@
+{
+  "products": [
+  { "id": 1, "name": "Product 1", "price": 120.0, "image": "/images/product-01.jpg", "reviews":2150, "badge": "-20%" },
+  { "id": 2, "name": "Product 2", "price": 90.0, "image": "/images/product-02.jpg", "reviews":4500 },
+  { "id": 3, "name": "Product 3", "price": 105.0, "image": "/images/product-03.jpg", "reviews":5170 },
+  { "id": 4, "name": "Product 4", "price": 87.0, "image": "/images/product-04.jpg", "reviews":2082 },
+  { "id": 5, "name": "Product 5", "price": 100.0, "image": "/images/product-05.jpg", "reviews":4820, "badge": "-20%" },
+  { "id": 6, "name": "Product 6", "price": 80.0, "image": "/images/product-06.jpg", "reviews":3648 }
+],
+
+  "underProducts": [
+    { "id": 7, "name": "Product 7", "price": 35.0, "image": "/images/product-07.jpg", "reviews":2150, "badge": "-20%" },
+    { "id": 8, "name": "Product 8", "price": 45.0, "image": "/images/product-08.jpg", "reviews":2150 },
+    { "id": 9, "name": "Product 9", "price": 25.0, "image": "/images/product-09.jpg", "reviews":2150 },
+    { "id": 10, "name": "Product 10", "price": 60.0, "image": "/images/product-10.jpg", "reviews":2150 },
+    { "id": 11, "name": "Product 11", "price": 55.0, "image": "/images/product-11.jpg", "reviews":2150, "badge": "-20%" },
+    { "id": 12, "name": "Product 12", "price": 74.0, "image": "/images/product-01.jpg", "reviews":2150 }
+  ],
+
+  "heroSlides": [
+    "/images/hero-banner-1.jpg",
+    "/images/hero-banner-2.jpg",
+    "/images/hero-banner-3.jpg"
+  ],
+
+  "features": [
+    { "icon": "/images/feature-1.jpg", "title": "Natural Ingredients", "text": "All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients." },
+    { "icon": "/images/feature-2.jpg", "title": "Cruelty-free", "text": "All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients." },
+    { "icon": "/images/feature-3.jpg", "title": "Safety Guaranteed", "text": "All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients." }
+  ],
+
+  "articles": [
+    { "title": "Find a Store", "image": "/images/blog-1.jpg", "linkText": "Our Store" },
+    { "title": "From Our Blog", "image": "/images/blog-2.jpg", "linkText": "Read More" },
+    { "title": "Our Story", "image": "/images/blog-3.jpg", "linkText": "Read More" }
+  ]
+}
