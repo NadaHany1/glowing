@@ -5,10 +5,13 @@ import {
   Menu,
 } from 'lucide-react';
 
-const Navbar = () => {
+interface NavProps {
+  toggleLogin: () => void
+}
+
+const Navbar = ({toggleLogin} : NavProps) => {
     const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
     const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
-    const [isLoginOpen, setIsLoginOpen] = useState<boolean>(false);
     const [headerActive, setHeaderActive] = useState<boolean>(false);
 
       useEffect(() => {
@@ -37,15 +40,13 @@ const Navbar = () => {
             </nav>
 
             <div className="flex items-center gap-6">
-              <button onClick={() => setIsLoginOpen(true)} className="hover:text-primary" aria-label="User account">
+              <button onClick={toggleLogin} className="hover:text-primary" aria-label="User account">
                 <User className="w-7 h-7" />
               </button>
               <button onClick={() => setIsCartOpen(true)} className="hover:text-primary" aria-label="Cart items">
                 <ShoppingBag className="w-7 h-7" />
               </button>
-            </div>
-          {/* Desktop Navigation */}
-          
+            </div>          
       </header>
   )
 }

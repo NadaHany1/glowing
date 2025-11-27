@@ -11,9 +11,12 @@ import Feature from '@/components/Feature';
 import Offer from '@/components/Offer';
 import Blog from '@/components/Blog';
 import Footer from '@/components/Footer';
+import Login from '@/components/Login';
 
 const Page = () => {
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
+
+  const [isLoginOpen, setIsLoginOpen] = useState<boolean>(false);
 
 
   useEffect(() => {
@@ -24,10 +27,15 @@ const Page = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleTogglelLogin = ():void => {
+    setIsLoginOpen(prev => !prev);
+  };
+
 
   return (
     <main className="w-full ">
-      <Navbar/>
+      <Navbar toggleLogin={handleTogglelLogin}/>
+      <Login isOpen={isLoginOpen} toggleLogin={handleTogglelLogin} />
       <Hero/>
       <Collection/>
       <Products header={"Our Bestsellers"} products={data.products}/>
