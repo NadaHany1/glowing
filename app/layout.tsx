@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CartProvider } from "./context/CartContext";
 
 export const metadata: Metadata = {
   title: 'Glowing - Reveal The Beauty of Skin',
@@ -16,9 +17,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/header.png" />
       </head>
+      <CartProvider>
       <body className="w-full overflow-x-hidden">
         {children}
       </body>
+      </CartProvider>
     </html>
   );
 }

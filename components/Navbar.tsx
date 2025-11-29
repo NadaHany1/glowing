@@ -4,15 +4,16 @@ import {
   User,
   Menu,
 } from 'lucide-react';
+import { useCart } from '@/app/context/CartContext';
 
 interface NavProps {
   toggleLogin: () => void
 }
 
 const Navbar = ({toggleLogin} : NavProps) => {
-    const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-    const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
     const [headerActive, setHeaderActive] = useState<boolean>(false);
+
+    const {toggleCart} = useCart()
 
       useEffect(() => {
           const handleScroll = () => {
@@ -24,7 +25,7 @@ const Navbar = ({toggleLogin} : NavProps) => {
 
   return (
       <header className={`sticky bg-background w-full h-[10vh] text:lg flex items-center justify-evenly top-0 z-40 transition-shadow ${headerActive ? 'shadow-md' : ''}`}>
-            <button onClick={() => setIsNavOpen(true)} className="lg:hidden" aria-label="Open menu">
+            <button onClick={() => alert("menu is open")} className="lg:hidden" aria-label="Open menu">
               <Menu className="w-6 h-6" />
             </button>
 
@@ -43,7 +44,7 @@ const Navbar = ({toggleLogin} : NavProps) => {
               <button onClick={toggleLogin} className="hover:text-primary" aria-label="User account">
                 <User className="w-7 h-7" />
               </button>
-              <button onClick={() => setIsCartOpen(true)} className="hover:text-primary" aria-label="Cart items">
+              <button onClick={toggleCart} className="hover:text-primary" aria-label="Cart items">
                 <ShoppingBag className="w-7 h-7" />
               </button>
             </div>          
