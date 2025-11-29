@@ -13,10 +13,12 @@ import Footer from '@/components/Footer';
 import Login from '@/components/Login';
 import Cart from '@/components/Cart';
 import data from '@/data/data.json'
+import MobileMenu from '@/components/MobileMenu';
 
 const Page = () => {
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
   const [isLoginOpen, setIsLoginOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,11 +32,16 @@ const Page = () => {
     setIsLoginOpen(prev => !prev);
   };
 
+  const handleToggleMenu = ():void => {
+    setIsMenuOpen(prev => !prev);
+  };
+
 
   return (
     <main className="w-full ">
-      <Navbar toggleLogin={handleToggleLogin}/>
+      <Navbar toggleLogin={handleToggleLogin} toggleMobileMenu={handleToggleMenu}/>
       <Login isOpen={isLoginOpen} toggleLogin={handleToggleLogin} />
+      <MobileMenu isOpen={isMenuOpen} toggleMenu={handleToggleMenu}/>
       <Cart />
       <Hero/>
       <Collection/>

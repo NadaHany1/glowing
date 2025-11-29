@@ -51,7 +51,6 @@ const Footer = () => {
               <Youtube className="w-5 h-5 cursor-pointer hover:text-primary" />
             </div>
             <div className="text-2xl font-bold text-black">GLOWING</div>
-            {/* <Image src="/images/pay.png" alt="Available payment methods" width={313} height={28} className='w-full max-w-xs' /> */}
             <div className="text-sm text-gray-600">© 2024 All rights reserved</div>
           </div>
       </footer>
